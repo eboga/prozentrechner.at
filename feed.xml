@@ -3,11 +3,11 @@
   <channel>
     <title>prozentrechner.at</title>
     <description>prozentrechner.at - bla bla bla.</description>
-    <link>http://localhost:4002/</link>
-    <atom:link href="http://localhost:4002/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Feb 2019 15:05:24 +0800</pubDate>
-    <lastBuildDate>Thu, 07 Feb 2019 15:05:24 +0800</lastBuildDate>
-    <generator>Jekyll v3.8.3</generator>
+    <link>https://www.prozentrechner.at/</link>
+    <atom:link href="https://www.prozentrechner.at/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 24 Feb 2020 13:24:12 +0100</pubDate>
+    <lastBuildDate>Mon, 24 Feb 2020 13:24:12 +0100</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>Tom is designing the new site</title>
@@ -35,9 +35,9 @@
 
 &lt;p&gt;Dolorem laudantium possimus esse tenetur voluptates nam. corrupti pariatur commodi est omnis excepturi dignissimos. commodi qui cum tempora ipsa porro quasi quis labore ea cum quod sapiente debitis asperiores. ut qui est ipsa enim numquam odit mollitia. velit earum unde qui animi quod earum repellendus facere aperiam nemo. ipsa praesentium aut quam aperiam qui voluptate&lt;/p&gt;
 </description>
-        <pubDate>Wed, 06 May 2015 18:20:05 +0800</pubDate>
-        <link>http://localhost:4002/design/2015/05/06/tom-is-designing-the-new-site.html</link>
-        <guid isPermaLink="true">http://localhost:4002/design/2015/05/06/tom-is-designing-the-new-site.html</guid>
+        <pubDate>Wed, 06 May 2015 12:20:05 +0200</pubDate>
+        <link>https://www.prozentrechner.at/design/2015/05/06/tom-is-designing-the-new-site.html</link>
+        <guid isPermaLink="true">https://www.prozentrechner.at/design/2015/05/06/tom-is-designing-the-new-site.html</guid>
         
         
         <category>design</category>
@@ -48,9 +48,9 @@
         <title>Make some sketches</title>
         <description>
 </description>
-        <pubDate>Mon, 04 May 2015 18:20:05 +0800</pubDate>
-        <link>http://localhost:4002/logo%20design/tricks%20and%20tips/2015/05/04/make-some-sketches.html</link>
-        <guid isPermaLink="true">http://localhost:4002/logo%20design/tricks%20and%20tips/2015/05/04/make-some-sketches.html</guid>
+        <pubDate>Mon, 04 May 2015 12:20:05 +0200</pubDate>
+        <link>https://www.prozentrechner.at/logo%20design/tricks%20and%20tips/2015/05/04/make-some-sketches.html</link>
+        <guid isPermaLink="true">https://www.prozentrechner.at/logo%20design/tricks%20and%20tips/2015/05/04/make-some-sketches.html</guid>
         
         <category>design</category>
         
@@ -67,9 +67,9 @@
         <title>Look what we have done</title>
         <description>
 </description>
-        <pubDate>Sun, 03 May 2015 18:20:05 +0800</pubDate>
-        <link>http://localhost:4002/illustrations/photography/2015/05/03/look-what-we-have-done.html</link>
-        <guid isPermaLink="true">http://localhost:4002/illustrations/photography/2015/05/03/look-what-we-have-done.html</guid>
+        <pubDate>Sun, 03 May 2015 12:20:05 +0200</pubDate>
+        <link>https://www.prozentrechner.at/illustrations/photography/2015/05/03/look-what-we-have-done.html</link>
+        <guid isPermaLink="true">https://www.prozentrechner.at/illustrations/photography/2015/05/03/look-what-we-have-done.html</guid>
         
         <category>news</category>
         
@@ -84,9 +84,9 @@
         <title>A post without image</title>
         <description>
 </description>
-        <pubDate>Sun, 03 May 2015 15:20:05 +0800</pubDate>
-        <link>http://localhost:4002/web%20design/web%20development/2015/05/03/a-post-without-image.html</link>
-        <guid isPermaLink="true">http://localhost:4002/web%20design/web%20development/2015/05/03/a-post-without-image.html</guid>
+        <pubDate>Sun, 03 May 2015 09:20:05 +0200</pubDate>
+        <link>https://www.prozentrechner.at/web%20design/web%20development/2015/05/03/a-post-without-image.html</link>
+        <guid isPermaLink="true">https://www.prozentrechner.at/web%20design/web%20development/2015/05/03/a-post-without-image.html</guid>
         
         <category>javascript</category>
         
@@ -116,9 +116,9 @@
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 02 May 2015 18:20:05 +0800</pubDate>
-        <link>http://localhost:4002/jekyll/update/2015/05/02/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4002/jekyll/update/2015/05/02/welcome-to-jekyll.html</guid>
+        <pubDate>Sat, 02 May 2015 12:20:05 +0200</pubDate>
+        <link>https://www.prozentrechner.at/jekyll/update/2015/05/02/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">https://www.prozentrechner.at/jekyll/update/2015/05/02/welcome-to-jekyll.html</guid>
         
         <category>logo</category>
         
