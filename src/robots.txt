@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /zum-anbieter/
-Disallow: /anbieter/
-Disallow: /link/
