@@ -1,0 +1,324 @@
+@use "base/tools.scss" as *;
+
+
+
+
+
+
+.c-Article {
+    --c-Article-elem__ff: var(--ff);
+    --c-Article-elem__fz: var(--fz);
+    --c-Article-elem__lh: var(--lh);
+    --c-Article-elem__mt: 16px;
+    --c-Article-elem__mb: 16px;
+    --c-Article-list__pl: 18px;
+    --c-Article-float__ib: 30px;
+    --c-Article-float__ix: 30px;
+    width: 100%;
+
+    @include mq(lg) {
+        --c-Article-elem__fz: 18px;
+        --c-Article-list__pl: 25px;
+    }
+
+    @include mq(xxl) {
+        --c-Article-list__pl: 40px;
+    }
+}
+
+
+
+/**
+ * Outside components
+ */
+
+.c-Article > div,
+.c-Article > form,
+.c-Article > blockquote {
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+
+
+@media (max-width: 47.99875em) {
+    .c-Article > .c-Action[class*="h-Flush"] {
+        margin-left: calc(var(--grid-i) * -1);
+        margin-right: calc(var(--grid-i) * -1);
+    }
+}
+
+
+
+
+/**
+ * Headings
+ */
+
+.c-Article > h1,
+.c-Article > h2,
+.c-Article > h3,
+.c-Article > h4,
+.c-Article > h5,
+.c-Article > h6 {
+    font-family: var(--ff-serif);
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    margin-top: 2em;
+}
+
+.c-Article > h1 {
+    font-size: calc(var(--c-Article-elem__fz) * 1.55);
+
+    @include mq(lg) {
+        font-size: calc(var(--c-Article-elem__fz) * 1.75);
+    }
+}
+
+.c-Article > h2 {
+    font-size: calc(var(--c-Article-elem__fz) * 1.3);
+
+    @include mq(lg) {
+        font-size: calc(var(--c-Article-elem__fz) * 1.55);
+    }
+}
+
+.c-Article > h3 {
+    font-size: calc(var(--c-Article-elem__fz) * 1.15);
+
+    @include mq(lg) {
+        font-size: calc(var(--c-Article-elem__fz) * 1.3);
+    }
+}
+
+.c-Article > h4 {
+    font-size: var(--c-Article-elem__fz);
+}
+
+.c-Article > h5 {
+    font-size: var(--c-Article-elem__fz);
+}
+
+.c-Article > h6 {
+    font-size: var(--c-Article-elem__fz);
+}
+
+
+
+/**
+ * Misc elements
+ */
+
+.c-Article > p,
+.c-Article > ol,
+.c-Article > ul,
+.c-Article > table ul,
+.c-Article > table {
+    font-family: var(--c-Article-elem__ff);
+    font-size: var(--c-Article-elem__fz);
+    line-height: var(--c-Article-elem__lh);
+    margin-bottom: var(--c-Article-elem__mb);
+    margin-top: var(--c-Article-elem__mt);
+}
+
+.c-Article > p:empty {
+    display: none;
+}
+
+
+
+/**
+ * Links
+ */
+
+.c-Article > p a,
+.c-Article > ol a,
+.c-Article > ol a,
+.c-Article > ul a,
+.c-Article > table ol a,
+.c-Article > table ul a {
+    color: var(--sorbus);
+    font-family: var(--c-Article-elem__ff);
+    font-size: var(--c-Article-elem__fz);
+    line-height: var(--c-Article-elem__lh);
+}
+
+.c-Article > p a:focus,
+.c-Article > p a:hover,
+.c-Article > ol a:focus,
+.c-Article > ol a:hover,
+.c-Article > ul a:focus,
+.c-Article > ul a:hover
+.c-Article > table ol a:focus,
+.c-Article > table ol a:hover,
+.c-Article > table ul a:focus,
+.c-Article > table ul a:hover {
+    color: var(--sorbus);
+    text-decoration: underline;
+}
+
+a[href*="//"]:not([href*="bbx"])::after {
+    .c-Article > &,
+    .c-Article > ol &,
+    .c-Article > table ol &,
+    .c-Article > p > &,
+    .c-Article > ul &,
+    .c-Article > table ul & {
+        background-image: url(/wp-content/themes/bbx.de/assets/images/arrow-external.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        content: "";
+        display: inline-block;
+        height: 9px;
+        margin-left: 8px;
+        margin-right: 4px;
+        width: 9px;
+    }
+}
+
+
+
+/**
+ * Lists
+ */
+
+.c-Article > ol,
+.c-Article > table ol,
+.c-Article > ol ol,
+.c-Article > table ol ol,
+.c-Article > ol ul,
+.c-Article > table ol ul,
+.c-Article > ul,
+.c-Article > table ul,
+.c-Article > ul ol,
+.c-Article > table ul ol,
+.c-Article > ul ul,
+.c-Article > table ul ul {
+    padding-left: var(--c-Article-list__pl);
+}
+
+.c-Article > ul,
+.c-Article > table ul {
+    list-style-type: disc;
+}
+
+.c-Article > ol,
+.c-Article > table ol {
+    list-style-type: decimal;
+}
+
+
+
+/**
+ * Tables
+ */
+
+.c-Article > table {
+    font-size: 16px;
+    line-height: 1.95;
+    table-layout: fixed;
+}
+
+.c-Article > table thead {
+    border-bottom: 1px solid var(--nero-03);
+}
+
+.c-Article > table tbody tr {
+    border-bottom: 1px solid var(--nero-01);
+    border-top: 1px solid var(--nero-01);
+}
+
+.c-Article > table th {
+    text-align: left;
+}
+
+.c-Article > table td {
+    padding-right: 8px;
+    vertical-align: top;
+}
+
+.c-Article > table td:last-child {
+    padding-right: 0;
+}
+
+
+
+/**
+ * Float
+ */
+
+.c-Article > .c-Article-float {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 60;
+}
+
+@media (min-width: 48em) {
+    .c-Article > .c-Article-float {
+        float: left;
+        margin: 0.5em var(--c-Article-float__ix) var(--c-Article-float__ib) 0;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .c-Article > .c-Article-float--free {
+        max-width: none;
+        width: auto;
+    }
+
+    .c-Article > .c-Article-float--right {
+        float: right;
+        margin-left: var(--c-Article-float__ix);
+        margin-right: 0;
+    }
+
+    .c-Article > .c-Article-float--flush {
+        margin-left: calc(var(--grid-i) * -1);
+    }
+
+    .c-Article > .c-Article-float--flush.c-Article-float--right {
+        margin-left: var(--c-Article-float__ix);
+        margin-right: calc(var(--grid-i) * -1);
+    }
+}
+
+@media (min-width: 775px) { // 15 + 745 + 15
+    .c-Article > .c-Article-float--narrowed {
+        margin-left: calc((100vw - var(--grid-i) - var(--grid-i) - var(--narrow-maxw)) / -2);
+    }
+}
+
+@media (min-width: 64em) {
+    .c-Article > .c-Article-float--narrowed {
+        margin-left: calc((var(--grid-maxw) - var(--grid-i) - var(--grid-i) - var(--narrow-maxw)) / -2);
+    }
+}
+
+
+
+/**
+ * Code
+ */
+.c-Article .highlighter-rouge > .highlight {
+    background-color: rgba(var(--color-cyprus),0.06);
+    border-radius: 3px;
+    display: flex;
+    font-weight: 700;
+    padding: 6px 10px;
+}
+
+
+
+/**
+ * Remove indent from first and last elements
+ */
+
+.c-Article > :first-child,
+.c-Article > :first-child.c-Article-float + * {
+    margin-top: 0;
+}
+
+.c-Article > :last-child {
+    margin-bottom: 0;
+}

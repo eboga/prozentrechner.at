@@ -1,0 +1,157 @@
+@use "base/tools.scss" as *;
+
+
+
+
+
+
+.c-Calc {
+    --o-Calc-input__ix: var(--form-indent-x);
+    --o-Calc-input__height: 75px;
+    --o-Calc-input__fz: 36px;
+    --o-Box__bgc: rgba(var(--color-diamond), 0.5);
+    --o-Box__il: var(--gutter);
+    --o-Box__ir: var(--gutter);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq(lg) {
+        --o-Calc-input__height: 55px;
+        --o-Calc-input__fz: 22px;
+        --o-Box__il: var(--indent-md);
+        --o-Box__ir: var(--indent-md);
+    }
+}
+
+
+
+.c-Calc-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+
+.c-Calc-fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.c-Calc-fields:first-child {
+    margin-top: 0;
+}
+
+
+
+.c-Calc-field {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 100%;
+    margin-top: 2px;
+    position: relative;
+
+    @include mq(lg) {
+        margin-top: 0;
+        flex: 1;
+    }
+}
+
+.c-Calc-field:first-child {
+    margin-top: 0;
+}
+
+
+
+.c-Calc-label {
+    flex: 1 100%;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    right: var(--o-Calc-input__ix);
+    top: 0;
+    z-index: 60;
+
+    @include mq(lg) {
+        position: static;
+        right: auto;
+        top: auto;
+    }
+}
+
+
+
+.c-Calc-input {
+    --o-FormText__lh: 1;
+    --o-FormText__fz: var(--o-Calc-input__fz);
+    --o-FormText__height: var(--o-Calc-input__height);
+    --o-FormText__ix: var(--o-Calc-input__ix);
+    --o-FormText__it: calc(var(--o-FormText__iy) * 2 - 15px);
+    --o-FormText__ib: 15px;
+    box-shadow: 0 2px 5px rgba(var(--color-black), 0.06);
+    flex: 1 100%;
+    font-weight: 700;
+    text-align: right;
+    z-index: 50;
+
+    @include mq(lg) {
+        --o-FormText__it: var(--o-FormText__iy);
+        --o-FormText__ib: var(--o-FormText__iy);
+        flex: 1;
+        margin-top: 13px;
+    }
+}
+
+.c-Calc-input:first-child {
+    margin-top: 0;
+}
+
+
+
+.c-Calc-operator {
+    // TODO: Finish height.
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    height: 25px;
+    left: var(--o-Calc-input__ix);
+    line-height: 1;
+    position: absolute;
+    z-index: 60;
+
+    @include mq(lg) {
+        align-self: flex-end;
+        bottom: auto;
+        height: var(--o-Calc-input__height);
+        justify-content: center;
+        left: auto;
+        position: static;
+        width: var(--o-Calc-input__height);
+    }
+}
+
+.c-Calc-operator--lg {
+    font-size: 35px;
+}
+
+
+
+.c-Calc-caption {
+    align-items: center;
+    display: flex;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-top: 17px;
+}
+
+.c-Calc-caption:first-child {
+    margin-top: 0;
+}
+
+.c-Calc-caption > .e-Icon {
+    fill: rgb(var(--color-accent));
+    margin-right: 6px;
+}

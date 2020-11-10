@@ -1,0 +1,52 @@
+.o-FormSelect {
+    --o-FormSelect__ir: calc(var(--o-FormElem-chevron__i) * 2 + var(--o-FormElem-chevron__w));
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+
+
+
+.o-FormSelect-chevron {
+    align-self: center;
+    color: var(--o-FormElem-chevron__c);
+    display: flex;
+    fill: currentColor;
+    height: var(--o-FormElem-chevron__h);
+    position: absolute;
+    right: var(--o-FormElem-chevron__i);
+    transform: translateY(1px);
+    width: var(--o-FormElem-chevron__w);
+    z-index: 55;
+}
+
+
+
+.o-FormSelect-select {
+    align-items: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--o-FormElem__bgc);
+    border: var(--o-FormElem__bdw) var(--o-FormElem__bds) var(--o-FormElem__bdc);
+    color: var(--o-FormElem__c);
+    display: flex;
+    font-family: inherit;
+    font-size: var(--o-Form__fz);
+    height: var(--o-FormElem__h);
+    line-height: var(--o-Form__lh);
+    overflow: hidden;
+    padding: var(--o-FormElem__it) var(--o-FormSelect__ir, var(--o-FormElem__ir)) var(--o-FormElem__ib) var(--o-FormElem__il);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 50;
+}
+
+.o-FormSelect-select:focus {
+    outline: none;
+}
+
+.o-FormSelect-select::-ms-expand {
+    display: none;
+}

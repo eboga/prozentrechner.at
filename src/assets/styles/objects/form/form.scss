@@ -1,0 +1,28 @@
+.o-Form {
+    --o-Form__fz: 16px;
+    --o-Form__lh: 1.5;
+    --o-Form__rythm: calc(var(--o-Form__fz) * var(--o-Form__lh));
+
+    --o-FormElem__bdc: transparent;
+    --o-FormElem__bdw: 0px;
+    --o-FormElem__bds: solid;
+    --o-FormElem__bdrs: 0px;
+    --o-FormElem__bgc: rgb(var(--bgc));
+    --o-FormElem__c: rgb(var(--color));
+    --o-FormElem__height: var(--form-height-1);
+    --o-FormElem__h: unset;
+    --o-FormElem__ix: 15px;
+    --o-FormElem__ib: calc((var(--o-FormElem__height) - var(--o-Form__rythm)) / 2);
+    --o-FormElem__il: var(--o-FormElem__ix);
+    --o-FormElem__ir: var(--o-FormElem__ix);
+    --o-FormElem__it: calc((var(--o-FormElem__height) - var(--o-Form__rythm)) / 2);
+
+    --o-FormElem-label__c: rgba(var(--color), 0.5);
+
+    --o-FormElem-input-placeholder__c: rgba(var(--color), 0.5);
+
+    --o-FormElem-chevron__c: var(--accent);
+    --o-FormElem-chevron__h: 10px;
+    --o-FormElem-chevron__w: 10px;
+    --o-FormElem-chevron__i: 12px;
+}

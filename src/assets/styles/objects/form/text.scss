@@ -1,0 +1,104 @@
+.o-FormText {
+    --o-FormText__height: var(--form-height);
+
+    --o-FormText__fz: var(--form-font-size);
+    --o-FormText__lh: var(--form-line-height);
+    --o-FormText__rythm: calc(var(--o-FormText__fz) * var(--o-FormText__lh));
+
+    --o-FormText__bgc: rgb(var(--form-background-color));
+
+    --o-FormText__bdc: rgb(var(--form-border-color));
+    --o-FormText__bdw: var(--form-border-width);
+    --o-FormText__bds: var(--form-border-style);
+    --o-FormText__bdrs: var(--form-border-radius);
+
+    --o-FormText__iy: calc((var(--o-FormText__height) - var(--o-FormText__rythm) - var(--o-FormText__bdw)) / 2);
+    --o-FormText__ix: 15px;
+    --o-FormText__it: var(--o-FormText__iy);
+    --o-FormText__ib: var(--o-FormText__iy);
+    --o-FormText__il: var(--o-FormText__ix);
+    --o-FormText__ir: var(--o-FormText__ix);
+
+    --o-FormText-input__c: rgb(var(--form-color));
+    --o-FormText-input-placeholder__c: rgba(var(--form-color), 0.4);
+
+    --o-FormText-label__c: rgba(var(--form-color), 0.4);
+
+    background-color: var(--o-FormText__bgc);
+    border-color: var(--o-FormText__bdc);
+    border-radius: var(--o-FormText__bdrs);
+    border-style: var(--o-FormText__bds);
+    border-width: var(--o-FormText__bdw);
+    cursor: pointer;
+    display: flex;
+    font-size: var(--o-FormText__fz);
+    line-height: var(--o-FormText__lh);
+    padding: var(--o-FormText__it) var(--o-FormText__ir) var(--o-FormText__ib) var(--o-FormText__il);
+    position: relative;
+}
+
+
+
+.o-FormText-input,
+.o-FormText-label {
+    font-size: var(--o-FormText__fz);
+    line-height: var(--o-FormText__lh);
+}
+
+.o-FormText-wrapper + .o-FormText-label,
+.o-FormText-label + .o-FormText-wrapper {
+    padding-left: var(--o-FormText__ix);
+}
+
+.o-FormText-wrapper + .o-FormText-label--tight,
+.o-FormText-label--tight + .o-FormText-wrapper {
+    padding-left: calc(var(--o-FormText__ix) * 0.3);
+}
+
+
+
+.o-FormText-wrapper {
+    display: flex;
+    font-size: var(--o-FormText__fz);
+    line-height: var(--o-FormText__lh);
+    width: 100%;
+}
+
+
+
+.o-FormText-input {
+    background-color: transparent;
+    color: var(--o-FormText-input__c);
+    font-size: var(--o-FormText__fz);
+    line-height: var(--o-FormText__lh);
+    width: 100%;
+}
+
+.o-FormText-input--height {
+    height: var(--o-FormText__rythm);
+}
+
+.o-FormText-input::placeholder {
+    color: var(--o-FormText-input-placeholder__c);
+}
+
+.o-FormText-input:focus {
+    outline: none;
+}
+
+.o-FormText-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.o-FormText-input[type=number]::-webkit-inner-spin-button,
+.o-FormText-input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+.o-FormText-label {
+    color: var(--o-FormText-label__c);
+    user-select: none;
+}

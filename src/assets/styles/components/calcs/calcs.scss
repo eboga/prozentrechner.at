@@ -1,0 +1,195 @@
+@use "base/tools.scss" as *;
+
+
+
+
+
+
+.c-Calcs {
+    --c-Calcs__color: var(--color);
+    --c-Calcs__color--accent: var(--color-accent);
+    --c-Calcs-head__bdc: rgb(var(--c-Calcs__color), 0.3);
+    --c-Calcs-head__bdw: 0px;
+    --c-Calcs-init__bdw: 3px;
+    --c-Calcs-init__c: rgb(var(--c-Calcs__color), 0.8);
+    --c-Calcs-init__c--active: rgb(var(--c-Calcs__color--accent));
+    --c-Calcs-init__bdc: rgb(var(--c-Calcs__color--accent));
+    --c-Calcs-init__bgc: rgba(var(--c-Calcs__color--accent), 0.08);
+    --c-Calcs-init__bgc--active: rgba(var(--c-Calcs__color--accent), 0.2);
+    --c-Calcs-init__ix: 8px;
+    --c-Calcs-init__iy: 8px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: 48em) {
+        --c-Calcs-head__bdw: 1px;
+        --c-Calcs-init__bgc: transparent;
+        --c-Calcs-init__bgc--active: transparent;
+        --c-Calcs-init__ix: 14px;
+    }
+}
+
+
+
+.c-Calcs-head {
+    border-bottom: var(--c-Calcs-head__bdw) solid var(--c-Calcs-head__bdc);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 100%;
+    position: relative;
+    z-index: 50;
+
+    @media (min-width: 48em) {
+        flex-wrap: nowrap;
+    }
+}
+
+.c-Calcs-head--pill {
+    border-color: rgba(var(--c-Calcs__color--accent), 0.2);
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+
+    @media (min-width: 30em) {
+        flex-wrap: wrap;
+        flex: initial;
+    }
+}
+
+
+
+.c-Calcs-init {
+    background-color: var(--c-Calcs-init__bgc);
+    color: var(--c-Calcs-init__c);
+    display: flex;
+    flex: 1 100%;
+    font-size: 16px;
+    font-weight: 400;
+    font-weight: 600;
+    margin-top: 5px;
+    padding: var(--c-Calcs-init__iy) var(--c-Calcs-init__ix);
+    position: relative;
+    text-align: left;
+    z-index: 60;
+
+    &::after {
+        background-color: transparent;
+        bottom: 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: var(--c-Calcs-init__bdw);
+        z-index: 70;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &[selected],
+    &.isActive {
+        background-color: var(--c-Calcs-init__bgc--active);
+        color: var(--c-Calcs-init__c--active);
+        display: block;
+
+        &::after {
+            background-color: var(--c-Calcs-init__bdc);
+        }
+    }
+
+    @media (min-width: 48em) {
+        background-color: transparent;
+        border-color: transparent transparent var(--c-Calcs-init__bdc);
+        border-width: var(--c-Calcs-init__bdw--bold) var(--c-Calcs-init__bdw) var(--c-Calcs-init__bdw) var(--c-Calcs-init__bdw);
+        flex: initial;
+        font-size: 18.5px;
+        margin-left: -1px;
+        margin-top: 0;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &::after {
+            bottom: calc((var(--c-Calcs-init__bdw) - var(--c-Calcs-head__bdw)) * -1);
+            height: var(--c-Calcs-init__bdw);
+            left: 0;
+            right: 0;
+            top: auto;
+            width: 100%;
+        }
+
+        &[selected],
+        &.isActive {
+            background-color: transparent;
+        }
+    }
+}
+
+.c-Calcs-init--pill {
+    background-color: transparent;
+    border-color: rgba(var(--c-Calcs__color--accent), 0.2);
+    border-style: solid;
+    border-width: 1px 0 0;
+    font-size: 16px;
+    margin-top: 0;
+    padding: 2px 10px;
+
+    &:first-child {
+        border-top-width: 0;
+    }
+
+    &::after {
+        display: none;
+    }
+
+    &[selected],
+    &.isActive {
+        background-color: rgba(var(--c-Calcs__color--accent), 0.2);
+        color: var(--c-Calcs-init__c);
+        font-weight: 700;
+    }
+
+    @media (min-width: 30em) {
+        border-width: 0 0 0 1px;
+        flex: initial;
+
+        &:first-child {
+            border-left-width: 0;
+        }
+    }
+}
+
+
+
+.c-Calcs-init.c-Calcs-init.c-Calcs-init,
+.c-Calcs-item.c-Calcs-item.c-Calcs-item {
+    outline: none;
+}
+
+
+
+.c-Calcs-body {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 100%;
+    margin-top: 30px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+
+.c-Calcs-item {
+    display: none;
+    width: 100%;
+
+    &[selected],
+    &.isActive {
+        display: block;
+    }
+}

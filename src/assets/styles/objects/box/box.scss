@@ -1,0 +1,12 @@
+.o-Box {
+    --o-Box__bgc: transparent;
+    --o-Box__ib: var(--indent-md);
+    --o-Box__il: var(--indent-md);
+    --o-Box__ir: var(--indent-md);
+    --o-Box__it: var(--indent-md);
+    background-color: var(--o-Box__bgc);
+    padding-bottom: var(--o-Box__ib);
+    padding-left: var(--o-Box__il);
+    padding-right: var(--o-Box__ir);
+    padding-top: var(--o-Box__it);
+}

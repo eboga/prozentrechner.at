@@ -1,0 +1,28 @@
+.c-Colophon {
+    margin-top: 16px;
+    margin-bottom: 56px;
+}
+
+
+
+.c-Colophon-row {
+    align-items: center;
+}
+
+
+
+.c-Colophon-list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.c-Colophon-li {
+    margin-left: 16px;
+}
+
+.c-Colophon-li:first-child {
+    margin-left: 0;
+}

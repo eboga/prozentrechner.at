@@ -1,0 +1,88 @@
+.o-FormCheckbox {
+    --o-FormCheckbox__bgc: transparent;
+    --o-FormCheckbox__bgc-hover: var(--jelly);
+    --o-FormCheckbox__bdc: var(--nero-03);
+    --o-FormCheckbox__bdc-hover: var(--jelly);
+    --o-FormCheckbox__bdrs: 0.1875em;
+    --o-FormCheckbox__bds: solid;
+    --o-FormCheckbox__bdw: 1px;
+    --o-FormCheckbox__fz: 13px;
+    --o-FormCheckbox__h: 13.5px;
+    --o-FormCheckbox__w: 13.5px;
+    --o-FormCheckbox-mask__trf: translateY(calc(var(--o-FormCheckbox__fz) * 0.15));
+    --o-FormCheckbox-label__mt: 0px;
+    align-content: flex-start;
+    align-items: baseline;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: var(--o-FormCheckbox__fz);
+}
+
+.o-FormCheckbox--center {
+    --o-FormCheckbox-mask__trf: none;
+    --o-FormCheckbox-label__mt: -0.1em;
+}
+
+.o-FormCheckbox--mantis {
+    --o-FormCheckbox__bgc-hover: var(--mantis);
+    --o-FormCheckbox__bdc-hover: var(--mantis);
+}
+
+
+
+.o-FormCheckbox-input {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+    width: 1px;
+}
+
+
+
+.o-FormCheckbox-mask {
+    align-items: center;
+    background-color: var(--o-FormCheckbox__bgc);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    border-color: var(--o-FormCheckbox__bdc);
+    border-radius: var(--o-FormCheckbox__bdrs);
+    border-style: var(--o-FormCheckbox__bds);
+    border-width: var(--o-FormCheckbox__bdw);
+    display: flex;
+    justify-content: center;
+    min-height: var(--o-FormCheckbox__h);
+    min-width: var(--o-FormCheckbox__w);
+    transform: var(--o-FormCheckbox-mask__trf);
+}
+
+.o-FormCheckbox-input:checked ~ .o-FormCheckbox-mask {
+    background-color: var(--o-FormCheckbox__bgc-hover);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNyAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguOTk5IDIzLjk4OGwtOS4wMDItOC45OSAzLjAwMS01Ljk5MyA2LjAwMSA1Ljk5M0wyNC4wMDIuMDEzbDMuMDAxIDUuOTk0TDguOTk5IDIzLjk4OHoiLz48L3N2Zz4=);
+    border-color: var(--o-FormCheckbox__bdc-hover);
+}
+
+
+
+.o-FormCheckbox-mask + .o-FormCheckbox-icon,
+.o-FormCheckbox-icon + .o-FormCheckbox-mask {
+    margin-left: 10px;
+}
+
+.o-FormCheckbox-mask + .o-FormCheckbox-label,
+.o-FormCheckbox-label + .o-FormCheckbox-mask {
+    margin-left: 8px;
+}
+
+
+
+.o-FormCheckbox-label {
+    font-size: var(--o-FormCheckbox__fz);
+    line-height: 1.2;
+    margin-top: var(--o-FormCheckbox-label__mt);
+    overflow: visible;
+    position: relative;
+    user-select: none;
+}

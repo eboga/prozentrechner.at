@@ -1,0 +1,123 @@
+//
+// Colors.
+//
+
+:root {
+    --color-diamond: 187, 228, 237; // #bbe4ed
+    --color-cyprus: 6, 69, 69; // #064545
+    --color-orange: 252, 96, 37; // #fc6025
+    --color-dolly: 246, 253, 118; // #f6fd76
+    --color-white: 255, 255, 255; // #ffffff
+    --color-black: 0, 0, 0; // #000000
+
+    --color-primary: var(--color-orange);
+    --color-accent: var(--color-orange);
+
+    --bgc: var(--color-white);
+    --color: var(--color-cyprus);
+}
+
+
+
+
+
+
+//
+// Typography.
+//
+
+:root {
+    --ff-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+    --ff-mono-1: monospace;
+
+    --ff-serif-1: serif;
+
+    --ff-sans-1: "PT Root UI";
+
+    --ff: var(--ff-sans-1), var(--ff-system);
+
+
+
+    --fz: 16px;
+    --lh: 1.5;
+    --rythm: calc(var(--fz) * var(--lh));
+}
+
+
+
+
+
+
+//
+// Forms.
+//
+
+:root {
+    --form-font-size: 16px;
+    --form-line-height: 1.5;
+
+    --form-border-color: transparent;
+    --form-border-width: 0px;
+    --form-border-style: solid;
+    --form-border-radius: 0px;
+
+    --form-background-color: var(--bgc);
+    --form-color: var(--color);
+
+    --form-indent-x: 15px;
+
+    --form-height: 40px;
+}
+
+
+
+
+
+
+//
+// Grid.
+//
+
+:root {
+    --gutter: 20px; // Indent on sides of a container.
+    --gap: 20px; // Indent between columns.
+}
+
+$grid-columns: 12;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 425px,
+    md: 576px,
+    lg: 768px,
+    xl: 880px,
+    xxl: 1024px,
+);
+
+$grid-max-widths: (
+    sm: 425px,
+    md: 576px,
+    lg: 768px,
+    xl: 880px,
+    xxl: 1000px,
+);
+
+$grid-breakpoint-keys: (xs, sm, md, lg, xl);
+$grid-breakpoint-keys-reversed: (xl, lg, md, sm, xs );
+
+
+
+
+
+
+//
+// Indents.
+//
+
+:root {
+    --indent-sm: 30px;
+    --indent-md: 40px;
+    --indent-lg: 50px;
+    --indent-xl: 60px;
+}

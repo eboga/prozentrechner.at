@@ -1,0 +1,21 @@
+@use "base/tools.scss" as *;
+
+
+
+
+
+
+.c-Logo {
+    display: flex;
+    height: 21.5px;
+
+    @include mq(lg) {
+        height: 26px;
+    }
+}
+
+
+
+.c-Logo-icon {
+    height: inherit;
+}

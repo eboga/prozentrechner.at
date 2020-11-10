@@ -1,0 +1,60 @@
+@use "base/root.scss" as *;
+@use "base/tools.scss" as *;
+
+
+
+
+
+
+//
+// Colors.
+//
+
+.t-ColorOrange {
+    color: rgb(var(--color-orange));
+}
+
+
+
+
+
+
+//
+// Cursors.
+//
+
+.t-CurD {
+    cursor: default;
+}
+
+.t-CurT {
+    cursor: text;
+}
+
+
+
+
+
+
+//
+// Others.
+//
+
+.h-VisuallyHidden {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.t-HeightFix {
+    display: table;
+}
+
+.t-Flush {
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+}

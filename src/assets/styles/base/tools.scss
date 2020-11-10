@@ -1,0 +1,63 @@
+@use "base/root.scss" as *;
+
+
+
+
+
+
+/// Ease up access to nested maps.
+/// @param {List} $map - A map that contian nested maps.
+/// @param {Mixed} $keys - A list of keys to handle.
+/// @return {Map}
+
+@function map-get-deep($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+
+
+//
+// Media queries.
+//
+
+/// Creates media query.
+/// @param {Number | String} $min - A value that will go to min-width property
+/// @param {Number | String} $max - A value that will go to max-width property. Optional.
+/// @return {CSS}
+
+@mixin mq($min: false, $max: false) {
+    $min-width: 0;
+    $max-width: 0;
+    $query: '';
+
+    @if $min {
+        @if type-of($min) == number {
+            $min-width: $min;
+        } @else {
+            $min-width: map-get($grid-breakpoints, $min);
+        }
+    }
+
+    @if $max {
+        @if type-of($max) == number {
+            $max-width: $max;
+        } @else {
+            $max-width: map-get($grid-breakpoints, $max) - 0.02px;
+        }
+    }
+
+    @if $min-width != 0 and $max-width != 0 {
+        $query: '(min-width: #{$min-width}) and (max-width: #{$max-width})';
+    } @else if $min-width != 0 and $max-width == 0 {
+        $query: '(min-width: #{$min-width})';
+    } @else if $min-width == 0 and $max-width != 0 {
+        $query: '(max-width: #{$max-width})';
+    }
+
+    @media #{$query} {
+        @content;
+    }
+}
